@@ -3,6 +3,7 @@
 // Lambda doesn't enter the picture here — keep it framework-pure.
 
 const express = require('express');
+const serverless = require('serverless-http');
 
 const app = express();
 app.use(express.json());
@@ -25,3 +26,5 @@ app.post('/api/echo', (req, res) => {
 app.use((_req, res) => res.status(404).json({ error: 'not found' }));
 
 module.exports = app;
+module.exports.handler = serverless(app);
+
