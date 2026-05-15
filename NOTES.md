@@ -1,19 +1,16 @@
-# AWS Lambda Deployment Notes
+# BYOL Challenge: Node.js Express on Lambda
 
-## Strategy
-**serverless-http wrapper**
+## Strategy: Strategy A — `serverless-http` adapter
 
-## Rationale
-- **Minimal Code Changes**: Only added 2 lines to `app.js` and installed 1 dependency (`serverless-http`). The core logic remains identical to the local Express app.
-- **Framework Pure**: The application still runs perfectly locally using `node server.js` without any modification to the entry point.
-- **Production Ready**: `serverless-http` is a widely adopted, battle-tested library for running Express on AWS Lambda.
+### Why this strategy?
+- **Minimal Code Change:** Only 3 lines of code in a new `lambda.js` file.
+- **Framework Pure:** The existing `app.js` and `server.js` remain completely untouched, keeping the Express logic decoupled from AWS Lambda specifics.
+- **Robustness:** `serverless-http` handles binary types, cookies, and multi-value headers correctly, which are common pain points when manually translating API Gateway events.
 
-## Performance
-- **Cold Start**: ~530ms (Total request time: ~1.26s)
-- **Warm Start**: ~730ms (Total request time: ~0.73s)
-- **Configuration**: Node.js 20.x, 512MB RAM, arm64 architecture.
+### Cold Start Measurement
+- **Measured Init Duration:** 277.13 ms
+- **Method:** Checked `REPORT` line in CloudWatch logs after first invocation.
 
-## Deployment Details
-- **Region**: us-west-2 (Oregon)
-- **API Type**: HTTP API (v2)
-- **Lambda Handler**: `app.handler`
+### Links
+- **API Gateway URL:** https://rk1wybh4i4.execute-api.us-west-2.amazonaws.com
+- **GitHub Source:** https://github.com/kietoichoiDXD/xbrain-w5-node-express-lambda
