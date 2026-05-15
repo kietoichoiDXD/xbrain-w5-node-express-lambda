@@ -92,5 +92,4 @@ Dưới đây là bằng chứng các endpoint hoạt động chính xác sau kh
 - `template.yaml`: Định nghĩa hạ tầng (Lambda, API Gateway, IAM Role) chuẩn SAM/CloudFormation.
 - `NOTES.md`: Ghi chú kỹ thuật nhanh về quá trình làm.
 
----
-**Ghi chú nộp bài:** Tôi đã cấp quyền Collaborator cho anh Nghĩa (`nghia.huynh@techxcorp.com`) trên GitHub repository này.
+
