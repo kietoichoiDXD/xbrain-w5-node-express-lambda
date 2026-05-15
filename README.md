@@ -1,8 +1,8 @@
-# Báo cáo nộp bài Lab W5 - Node.js Express on Lambda (BYOL)
+#  W5 - Node.js Express on Lambda (BYOL)
 
-**Người nộp:** Kiet (hoặc tên nhóm của bạn)
+**Người nộp:** Kiet 
 **Repository:** [https://github.com/kietoichoiDXD/xbrain-w5-node-express-lambda](https://github.com/kietoichoiDXD/xbrain-w5-node-express-lambda)
-**Giảng viên chấm bài:** Anh Huỳnh Nghĩa (nghia.huynh@techxcorp.com)
+
 
 ---
 
@@ -17,7 +17,7 @@ Tất cả các endpoint đều hoạt động chính xác trả về đúng đ�
 ---
 
 ## ☁️ 2. Thông tin triển khai AWS
-- **AWS Account ID:** `318662970982`
+- 
 - **AWS Region:** `us-west-2`
 - **Stack Name:** `byol-node-express-kietbe`
 - **IAM User:** `KietBE` (Workshop Participant)
@@ -35,7 +35,7 @@ Tất cả các endpoint đều hoạt động chính xác trả về đúng đ�
 
 ### Cold Start Đo Được
 
-- **Measured Init Duration (Thời gian khởi tạo):** `336.78 ms`
+- **Measured Init Duration (Thời gian khởi tạo):** `277.5 ms`
 - **Duration (Execution):** `~45 - 52 ms`
 - **Memory Allocated:** `512 MB`
 - **Max Memory Used:** `97 MB`
@@ -58,5 +58,4 @@ Tất cả các endpoint đều hoạt động chính xác trả về đúng đ�
 - `template.yaml`: Đã cấu hình Handler trỏ vào `lambda.js` và xử lý quyền triển khai.
 - `NOTES.md`: Chứa các ghi chú gốc của quá trình thử nghiệm.
 
----
-*Cảm ơn anh Nghĩa đã review bài tập này! Quền truy cập (Collaborator access) vào repo này đã được chia sẻ vào email nghia.huynh@techxcorp.com.*
+
