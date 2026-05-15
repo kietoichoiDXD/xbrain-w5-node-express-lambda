@@ -42,7 +42,7 @@ Chuyển đổi một ứng dụng Node.js Express truyền thống (chạy HTTP
 
 Tôi đã thực hiện đo đạc Cold Start thông qua CloudWatch Logs (dòng `REPORT` của lần gọi đầu tiên):
 
-- **Cold Start (Init Duration):** `336.78 ms`
+- **Cold Start (Init Duration):** `264.46 ms`
 - **Duration (Execution):** `~45 - 52 ms`
 - **Memory Allocated:** `512 MB`
 - **Max Memory Used:** `97 MB`
