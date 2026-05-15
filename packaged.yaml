@@ -5,7 +5,7 @@ Description: BYOL challenge — Node.js Express on Lambda (your job to fill in
 Globals:
   Function:
     Timeout: 10
-    MemorySize: 512
+    MemorySize: 2048
     Runtime: nodejs22.x
     Architectures:
     - arm64
@@ -14,7 +14,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: 
-        s3://lambda-deploy-xbrain-1518933578/24fa602a3e0405df5f81ddcb0f17eb67
+        s3://lambda-deploy-xbrain-1518933578/72e977490fb3b47139c7d4d3e4e25e9a
       Handler: lambda.handler
       Tracing: Active
       Events:

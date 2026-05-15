@@ -34,10 +34,22 @@ Tất cả các endpoint đều hoạt động chính xác trả về đúng đ�
 - **Tính ổn định (Robustness):** Thư viện `serverless-http` xử lý rất tốt các loại dữ liệu nhị phân (binary types), cookie và multi-value headers; qua đó giúp loại bỏ những lỗi đau đầu thường gặp khi phải biên dịch các event của API Gateway bằng tay (so với Strategy D).
 
 ### Cold Start Đo Được
-- **Measured Init Duration (Thời gian khởi tạo):** `~336.78 ms` (lần khởi tạo đầu tiên)
+
+- **Measured Init Duration (Thời gian khởi tạo):** `336.78 ms`
+- **Duration (Execution):** `~45 - 52 ms`
+- **Memory Allocated:** `512 MB`
+- **Max Memory Used:** `97 MB`
+
 - **Phương pháp đo:** Đã lấy log thông qua việc kiểm tra dòng `REPORT` của first invocation ở AWS CloudWatch Logs (`/aws/lambda/byol-node-express-kietbe-...`).
 
+
 ---
+
+## 📸 Hình ảnh minh họa kết quả (Evidence)
+![W5 Lab Result](w5.png)
+
+---
+
 
 ## 📂 4. Cấu trúc Source Code
 

@@ -83,7 +83,12 @@ Dưới đây là bằng chứng các endpoint hoạt động chính xác sau kh
 }
 ```
 
+
+### 📸 Hình ảnh minh họa kết quả
+![W5 Lab Result](w5.png)
+
 ---
+
 
 ## 📁 6. Cấu trúc Source Code
 
