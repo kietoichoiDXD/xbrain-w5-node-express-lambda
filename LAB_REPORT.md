@@ -1,6 +1,6 @@
 # 📑 BÁO CÁO KẾT QUẢ LAB: NODE.JS EXPRESS ON LAMBDA (BYOL)
 
-**Học viên:** [Tên của bạn]
+**Học viên:** Kiet
 **Ngày thực hiện:** 15/05/2026
 **Khóa học:** AWS X-Brain Week 5
 **Người hướng dẫn:** Anh Huỳnh Nghĩa (nghia.huynh@techxcorp.com)
