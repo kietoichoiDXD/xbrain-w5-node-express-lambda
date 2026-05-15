@@ -8,9 +8,9 @@
 - **Robustness:** `serverless-http` handles binary types, cookies, and multi-value headers correctly, which are common pain points when manually translating API Gateway events.
 
 ### Cold Start Measurement
-- **Measured Init Duration:** 277.13 ms
+- **Measured Init Duration:** 336.78 ms
 - **Method:** Checked `REPORT` line in CloudWatch logs after first invocation.
 
 ### Links
-- **API Gateway URL:** https://rk1wybh4i4.execute-api.us-west-2.amazonaws.com
+- **API Gateway URL:** https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com
 - **GitHub Source:** https://github.com/kietoichoiDXD/xbrain-w5-node-express-lambda

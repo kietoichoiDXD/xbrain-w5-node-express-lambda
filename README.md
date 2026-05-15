@@ -8,14 +8,24 @@
 
 ## 🚀 1. Link API Gateway URL đã deploy
 Dưới đây là link API Gateway gốc đã được deploy thành công lên môi trường AWS Lambda thông qua CloudFormation (`us-west-2`):
-- **Root URL:** [https://rk1wybh4i4.execute-api.us-west-2.amazonaws.com](https://rk1wybh4i4.execute-api.us-west-2.amazonaws.com)
-- **Test Endpoint (Hello):** [https://rk1wybh4i4.execute-api.us-west-2.amazonaws.com/api/hello/Lan](https://rk1wybh4i4.execute-api.us-west-2.amazonaws.com/api/hello/Lan)
+- **Root URL:** [https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com](https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com)
+- **Test Endpoint (Hello):** [https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com/api/hello/Lan](https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com/api/hello/Lan)
+- **Test Endpoint (Echo - POST):** [https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com/api/echo](https://fpylwbd5wk.execute-api.us-west-2.amazonaws.com/api/echo)
 
-Tất cả các endpoint (bao gồm POST `/api/echo`) đều hoạt động chính xác trả về đúng định dạng JSON chuẩn giống hệt lúc chạy Local.
+Tất cả các endpoint đều hoạt động chính xác trả về đúng định dạng JSON chuẩn giống hệt lúc chạy Local.
 
 ---
 
-## 📝 2. Chi tiết Chiến lược & Đo đạc Cold Start (Trích xuất từ NOTES.md)
+## ☁️ 2. Thông tin triển khai AWS
+- **AWS Account ID:** `318662970982`
+- **AWS Region:** `us-west-2`
+- **Stack Name:** `byol-node-express-kietbe`
+- **IAM User:** `KietBE` (Workshop Participant)
+- **Deployment Tool:** AWS CLI (CloudFormation Package & Deploy)
+
+---
+
+## 📝 3. Chi tiết Chiến lược & Đo đạc Cold Start (Trích xuất từ NOTES.md)
 
 ### Chiến lược đã chọn: Strategy A — `serverless-http` adapter
 **Lý do chọn chiến lược này:**
@@ -24,12 +34,12 @@ Tất cả các endpoint (bao gồm POST `/api/echo`) đều hoạt động chí
 - **Tính ổn định (Robustness):** Thư viện `serverless-http` xử lý rất tốt các loại dữ liệu nhị phân (binary types), cookie và multi-value headers; qua đó giúp loại bỏ những lỗi đau đầu thường gặp khi phải biên dịch các event của API Gateway bằng tay (so với Strategy D).
 
 ### Cold Start Đo Được
-- **Measured Init Duration (Thời gian khởi tạo):** `277.13 ms`
-- **Phương pháp đo:** Đã lấy log thông qua việc kiểm tra dòng `REPORT` của first invocation ở AWS CloudWatch Logs (`/aws/lambda/byol-node-express-ExpressFunction-...`).
+- **Measured Init Duration (Thời gian khởi tạo):** `~336.78 ms` (lần khởi tạo đầu tiên)
+- **Phương pháp đo:** Đã lấy log thông qua việc kiểm tra dòng `REPORT` của first invocation ở AWS CloudWatch Logs (`/aws/lambda/byol-node-express-kietbe-...`).
 
 ---
 
-## 📂 3. Cấu trúc Source Code
+## 📂 4. Cấu trúc Source Code
 
 - `lambda.js`: File Entrypoint mới dành riêng cho Lambda (Sử dụng `serverless-http`).
 - `app.js` & `server.js`: Giữ nguyên bản gốc.
